@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenido a AppTimeLost
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Correo Activo : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-list-header>
+        ¿Que quieres hacer hoy?
+    </ion-list-header>
+      <ion-item>
+        <ion-label>
+          <ion-button expand="block" [routerLink]="['/news']">Ver noticias</ion-button>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+        <ion-button expand="block" [routerLink]="['/playlist']">Ver videos</ion-button>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+        <ion-button expand="block" [routerLink]="['/p-page']">Ver juegos</ion-button>
+      </ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="danger">
+    <ion-title>Log out</ion-title>
+  </ion-toolbar>
+</ion-footer>
